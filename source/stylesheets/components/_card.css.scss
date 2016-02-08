@@ -6,53 +6,54 @@
   color: white;
   margin-bottom: 10px;
   text-shadow: 0 0 5px #000;
-}
 
-.card::after {
-  z-index: 1;
-  border-radius: 5px;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: black;
-  opacity: 0;
-}
 
-.card:hover::after{
-  opacity: 0.2;
-}
+  &::after {
+    z-index: 1;
+    border-radius: 5px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0;
+  }
 
-.card .description {
-  z-index: 2;
-  position: absolute;
-  bottom: 30px;
-  left: 10px;
-}
+  &:hover::after{
+    opacity: 0.2;
+  }
 
-.card .destination {
-  z-index: 2;
-  font-size: 20px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-}
+  .description {
+    z-index: 2;
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+  }
 
-.card h3 {
-  z-index: 2;
-  font-weight: bold;
-  position: absolute;
-  bottom: 60px;
-  left: 10px;
-}
+  .destination {
+    z-index: 2;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
 
-.card .avatar {
-  z-index: 2;
-  width:50px;
-  border-radius: 50%;
-  top: 10px;
-  right: 10px;
-  position: absolute;
+  h3 {
+    z-index: 2;
+    font-weight: bold;
+    position: absolute;
+    bottom: 60px;
+    left: 10px;
+  }
+
+  .avatar {
+    z-index: 2;
+    width:50px;
+    border-radius: 50%;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+  }
 }
