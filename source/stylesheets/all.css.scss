@@ -14,6 +14,29 @@
 @import "pages/*";
 @import "vendor/*";
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  color: #333;
+  line-height: 1.42857143;
+  font-family: Open-sans, sans-serif;
+}
+h1, h2, h3 {
+  font-family: Raleway, Helvetica, sans-serif;
+}
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
 
+.site-content {
+  flex: 1;
+}
 
-
+.wrapper-grey {
+  background: #F4F4F4;
+}
