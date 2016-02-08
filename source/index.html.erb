@@ -46,36 +46,18 @@
   <h2>Your next trip</h2>
   <div class="container">
     <div class="row">
+    <% data.flats.each do |owner, flat| %>
       <div class="col-sm-4">
         <% link_to "#" do %>
-          <div class="card" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)) repeat scroll 0% 0%, transparent url('images/card-paris.jpg') repeat scroll 0% 0%">
-            <h3>Seb's home</h3>
-            <%= image_tag("seb.jpg", alt: "", class: "avatar") %>
-            <div class="destination">Paris</div>
-            <div class="description">Charming room with patio</div>
+          <div class="card" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)) repeat scroll 0% 0%, transparent url('<%= image_path flat.picture %>') repeat scroll 0% 0%">
+            <h3><%= flat.name %></h3>
+            <%= image_tag(image_path(flat.owner_picture), alt: "", class: "avatar") %>
+            <div class="destination"><%= flat.city %></div>
+            <div class="description"><%= flat.summary %></div>
           </div>
         <% end %>
-      </div>
-      <div class="col-sm-4">
-        <% link_to "#" do %>
-          <div class="card" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)) repeat scroll 0% 0%, transparent url('images/card-brussels.jpeg') repeat scroll 0% 0%">
-            <h3>Anne's home</h3>
-            <%= image_tag("anne.jpg", alt: "", class: "avatar") %>
-            <div class="destination">Brussels</div>
-            <div class="description">Lovely house</div>
-          </div>
-        <% end %>
-      </div>
-      <div class="col-sm-4">
-        <% link_to "#" do %>
-          <div class="card" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)) repeat scroll 0% 0%, transparent url('images/card-london.jpeg') repeat scroll 0% 0%">
-            <h3>Romain's home</h3>
-            <%= image_tag("romain.jpeg", alt: "", class: "avatar") %>
-            <div class="destination">London</div>
-            <div class="description">Nice flat in Picadilly</div>
-          </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
